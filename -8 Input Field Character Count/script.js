@@ -1,10 +1,6 @@
-let hex = document.querySelector(".hex");
-let btn = document.querySelector(".generate");
+let counter = document.querySelector('.count');
+let input = document.querySelector('input');
 
-const generateColor = () => {
-  let color = Math.random().toString(16).substring(2, 8);
-  document.body.style.backgroundColor = "#" + color;
-  hex.innerHTML = "#" + color;
-};
-
-btn.addEventListener("click", generateColor);
+input.addEventListener('keyup', () => {
+  counter.innerHTML = input.value.length;
+});
